@@ -1,0 +1,6 @@
+product_id,name,category,status,notes,images_generated,quality_score,realism_score
+101-SW-K,"Platform Bed (Solid Wood, King)",Bedroom,replaced_wrong,"Generated 30 variants",30,91.4,88.8
+101-SW-Q,"Platform Bed (Solid Wood, Queen)",Bedroom,replaced_wrong,"Generated 30 variants",30,91.4,88.8
+101-SW-KO,"Platform Bed (Premium Oak, King)",Bedroom,kept_valid,"Generated 30 variants",30,91.4,93.8
+101-SW-KM,"Platform Bed (Luxury Mahogany, King)",Bedroom,replaced_wrong,"Generated 30 variants",30,91.4,88.8
+102-MW,"3-Door Wardrobe (Mirrored)",Bedroom,kept_valid,"Generated 30 variants",30,91.4,93.8

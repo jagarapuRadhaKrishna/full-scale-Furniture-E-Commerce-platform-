@@ -1,0 +1,126 @@
+{
+  "asset": {
+    "version": "2.0",
+    "generator": "DFW-Furniture-3D-Generator",
+    "copyright": "DFW Furniture World"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "4-Door Wardrobe (Solid Wood)",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "4-Door Wardrobe (Solid Wood)_root",
+      "mesh": 0,
+      "scale": [1, 1, 1],
+      "rotation": [0, 0, 0, 1],
+      "translation": [0, 0, 0]
+    }
+  ],
+  "meshes": [
+    {
+      "name": "4-Door Wardrobe (Solid Wood)_mesh",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "Solid Wood_material",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [0.5, 0.5, 0.5, 1.0],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.7
+      }
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 1200,
+      "type": "VEC3",
+      "max": [1, 1, 1],
+      "min": [-1, -1, -1]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1200,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1200,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 1800,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 14400,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 14400,
+      "byteLength": 14400,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 28800,
+      "byteLength": 9600,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 38400,
+      "byteLength": 3600,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 42000,
+      "uri": "data:application/octet-stream;base64,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA..."
+    }
+  ],
+  "extensions": {
+    "KHR_materials_unlit": {},
+    "MSFT_lod": {
+      "ids": [0, 1, 2]
+    }
+  },
+  "metadata": {
+    "productId": "102-SW-4D",
+    "category": "Bedroom",
+    "subCategory": "Wardrobes",
+    "material": "Solid Wood",
+    "style": "Traditional",
+    "dimensions": "Dimensions: 200 x 60 x 220 cm, Weight: 180 kg, Warranty: 10 Years",
+    "arReady": true,
+    "quality": "high",
+    "optimizedFor": ["webXR", "AR", "mobile"]
+  }
+}

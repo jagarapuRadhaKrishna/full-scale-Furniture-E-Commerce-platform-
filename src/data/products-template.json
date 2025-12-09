@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "id": "dfw-ls-001",
+      "model": "DFW-LS-001",
+      "name": "Premium L-Shape Sofa",
+      "category": "Living Room",
+      "subcategory": "Sofas & Sectionals",
+      "description": "Your product description here",
+      "dimensions": {
+        "length": 280,
+        "width": 180,
+        "height": 85,
+        "weight": 120,
+        "unit": "cm"
+      },
+      "materials": {
+        "primary": "Premium Fabric",
+        "secondary": "High-density Foam",
+        "finish": "Matte",
+        "upholstery": "Stain-resistant Fabric",
+        "hardware": "Steel Frame"
+      },
+      "variants": [
+        {
+          "color": "Grey",
+          "images": [
+            "https://your-image-link-1.jpg",
+            "https://your-image-link-2.jpg"
+          ],
+          "price": 89999,
+          "stock": 15
+        },
+        {
+          "color": "Beige",
+          "images": [
+            "https://your-image-link-3.jpg",
+            "https://your-image-link-4.jpg"
+          ],
+          "price": 89999,
+          "stock": 12
+        }
+      ],
+      "features": [
+        "Ergonomic Back Support",
+        "Detachable Cushions",
+        "Spill Resistant Fabric"
+      ],
+      "specifications": {
+        "Frame Material": "Solid Teak Wood",
+        "Foam Density": "35D HR Foam",
+        "Weight Capacity": "450 kg"
+      },
+      "warranty": "10 years structural, 2 years fabric",
+      "rating": 4.6,
+      "reviews": 245,
+      "isCustomizable": true,
+      "customizationOptions": ["Fabric Color", "Cushion Firmness"],
+      "tags": ["L-shaped", "sectional", "living room", "premium"],
+      "createdAt": "2024-01-15T00:00:00.000Z",
+      "updatedAt": "2024-12-01T00:00:00.000Z"
+    }
+  ]
+}

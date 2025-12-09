@@ -1,0 +1,519 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Navbar curved design */
+.navbar-curve {
+  position: relative;
+  background: linear-gradient(180deg, #151c2c 0%, #1a2335 100%);
+}
+
+.navbar-curve::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: inherit;
+  border-radius: 0 0 40px 40px;
+  z-index: -1;
+}
+
+.navbar-curve::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96%;
+  height: 30px;
+  background: inherit;
+  filter: blur(10px);
+  border-radius: 50%;
+  z-index: -2;
+  opacity: 0.8;
+}
+
+.navbar-gradient {
+  background: linear-gradient(90deg, 
+    rgba(255,255,255,0.03) 0%,
+    rgba(255,255,255,0.05) 50%,
+    rgba(255,255,255,0.03) 100%
+  );
+}
+
+@keyframes dropdownEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-dropdown-enter {
+  animation: dropdownEnter 0.2s ease-out forwards;
+}
+
+/* Custom styles for DFW Furniture World */
+@layer base {
+  html, body {
+    font-family: 'Inter', system-ui, sans-serif;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  
+  /* Prevent horizontal scrolling globally */
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Cursor pointer for all clickable elements */
+  a, button, [role="button"], .cursor-pointer, 
+  input[type="button"], input[type="submit"], input[type="reset"],
+  select, .clickable, [onclick] {
+    cursor: pointer !important;
+  }
+  
+  /* Ensure images are clickable when they should be */
+  .product-image, .gallery-image, .clickable-image {
+    cursor: pointer !important;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Container constraints */
+  .container {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Grid and flex containers */
+  .grid, .flex {
+    max-width: 100%;
+  }
+  
+  /* Images responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Fix cursor behavior globally */
+  * {
+    cursor: default;
+    user-select: none; /* Prevent text selection */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  
+  /* Clickable elements should have pointer cursor */
+  button,
+  a,
+  [role="button"],
+  [onClick],
+  [data-clickable],
+  .cursor-pointer,
+  .btn,
+  .btn-primary,
+  .btn-secondary,
+  .nav-link,
+  .menu-item,
+  .card-clickable,
+  .clickable,
+  .interactive,
+  nav a,
+  nav button,
+  .navbar a,
+  .navbar button,
+  .sidebar a,
+  .sidebar button,
+  .dropdown-item,
+  .tab,
+  .toggle,
+  .slider,
+  .rating-star,
+  .image-thumbnail,
+  .product-card,
+  .category-card,
+  .feature-card,
+  [data-testid*="button"],
+  [data-testid*="link"],
+  [class*="button"],
+  [class*="btn"],
+  [class*="link"],
+  [class*="clickable"],
+  [class*="interactive"],
+  div[onClick],
+  span[onClick],
+  p[onClick],
+  img[onClick],
+  svg[onClick],
+  path[onClick] {
+    cursor: pointer !important;
+    user-select: none !important; /* Prevent text selection on clickable elements */
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+  }
+  
+  /* Interactive form elements - these should allow text selection */
+  input,
+  textarea,
+  select,
+  [contenteditable="true"] {
+    cursor: text;
+    user-select: text !important; /* Allow text selection in form fields */
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+  }
+  
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  input[type="checkbox"],
+  input[type="radio"] {
+    cursor: pointer !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+  }
+  
+  /* Hover states for clickable elements */
+  button:hover,
+  a:hover,
+  [role="button"]:hover,
+  [onClick]:hover,
+  [data-clickable]:hover,
+  .cursor-pointer:hover,
+  .btn:hover,
+  .nav-link:hover,
+  .menu-item:hover,
+  .card-clickable:hover,
+  .clickable:hover,
+  .interactive:hover,
+  nav a:hover,
+  nav button:hover,
+  .navbar a:hover,
+  .navbar button:hover,
+  .sidebar a:hover,
+  .sidebar button:hover,
+  .dropdown-item:hover,
+  .tab:hover,
+  .toggle:hover,
+  .slider:hover,
+  .rating-star:hover,
+  .image-thumbnail:hover,
+  .product-card:hover,
+  .category-card:hover,
+  .feature-card:hover,
+  [data-testid*="button"]:hover,
+  [data-testid*="link"]:hover,
+  [class*="button"]:hover,
+  [class*="btn"]:hover,
+  [class*="link"]:hover,
+  [class*="clickable"]:hover,
+  [class*="interactive"]:hover,
+  div[onClick]:hover,
+  span[onClick]:hover,
+  p[onClick]:hover,
+  img[onClick]:hover,
+  svg[onClick]:hover,
+  path[onClick]:hover {
+    cursor: pointer !important;
+  }
+  
+  /* Disabled elements */
+  button:disabled,
+  input:disabled,
+  textarea:disabled,
+  select:disabled {
+    cursor: not-allowed !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+  }
+  
+  /* Specific text elements that should allow selection */
+  p,
+  span,
+  div.selectable-text,
+  .allow-select {
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    cursor: text;
+  }
+  
+  /* Override for headings - should not be selectable */
+  h1, h2, h3, h4, h5, h6 {
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    cursor: default;
+  }
+
+  /* Universal interactive element cursor fix */
+  *[onclick],
+  *[onmousedown],
+  *[onmouseup],
+  *[onkeydown],
+  *[onkeyup],
+  *[tabindex]:not([tabindex="-1"]),
+  *[data-testid],
+  .group,
+  .transition,
+  .transform,
+  .hover\:scale-105,
+  .hover\:scale-110,
+  .hover\:shadow-lg,
+  .hover\:shadow-xl,
+  .hover\:bg-gray-50,
+  .hover\:bg-gray-100,
+  .hover\:bg-blue-50,
+  .hover\:text-blue-600,
+  .hover\:text-primary-600 {
+    cursor: pointer !important;
+  }
+
+  /* Force pointer cursor on any element that has hover effects */
+  *:hover {
+    cursor: pointer;
+  }
+
+  /* But reset for text inputs and content */
+  input:hover,
+  textarea:hover,
+  [contenteditable]:hover,
+  p:hover,
+  span:hover:not([onclick]):not([data-testid]):not(.clickable) {
+    cursor: text;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg transition duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-200;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+}
+
+/* Custom navbar animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-10px) translateX(5px); }
+}
+
+@keyframes floatMedium {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-8px) translateX(-3px); }
+}
+
+@keyframes floatFast {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-6px) translateX(8px); }
+}
+
+@layer utilities {
+  .animate-float-slow {
+    animation: floatSlow 6s ease-in-out infinite;
+  }
+  
+  .animate-float-medium {
+    animation: floatMedium 4s ease-in-out infinite;
+  }
+  
+  .animate-float-fast {
+    animation: floatFast 3s ease-in-out infinite;
+  }
+
+  /* Force pointer cursor on all interactive elements */
+  .cursor-click {
+    cursor: pointer !important;
+  }
+  
+  /* Apply to all elements that should be clickable */
+  .group,
+  .transition-all,
+  .transition-colors,
+  .transition-transform,
+  .transition-shadow,
+  .hover\:scale-105,
+  .hover\:scale-110,
+  .hover\:shadow,
+  .hover\:shadow-md,
+  .hover\:shadow-lg,
+  .hover\:shadow-xl,
+  .hover\:bg-opacity-90,
+  .hover\:text-opacity-90 {
+    cursor: pointer !important;
+  }
+}
+
+/* Custom animations for navigation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Hero section animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-delay {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+.animate-fade-in-delay {
+  animation: fade-in-delay 1.2s ease-out forwards;
+}
+
+/* Dropdown animation */
+@keyframes dropdown-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-dropdown-appear {
+  animation: dropdown-appear 0.2s ease-out forwards;
+}
+
+/* Enhanced Responsive Utilities */
+@layer utilities {
+  /* Mobile-first responsive text */
+  .text-responsive-xs {
+    @apply text-xs sm:text-sm md:text-base;
+  }
+  
+  .text-responsive-sm {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+  
+  .text-responsive-base {
+    @apply text-base sm:text-lg md:text-xl;
+  }
+  
+  .text-responsive-lg {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl;
+  }
+  
+  .text-responsive-xl {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+  }
+  
+  .text-responsive-2xl {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  .text-responsive-3xl {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  /* Responsive padding */
+  .p-responsive {
+    @apply p-4 sm:p-6 md:p-8 lg:p-10;
+  }
+  
+  .px-responsive {
+    @apply px-4 sm:px-6 md:px-8 lg:px-10;
+  }
+  
+  .py-responsive {
+    @apply py-4 sm:py-6 md:py-8 lg:py-10;
+  }
+  
+  /* Responsive margins */
+  .m-responsive {
+    @apply m-4 sm:m-6 md:m-8 lg:m-10;
+  }
+  
+  .mx-responsive {
+    @apply mx-4 sm:mx-6 md:mx-8 lg:mx-10;
+  }
+  
+  .my-responsive {
+    @apply my-4 sm:my-6 md:my-8 lg:my-10;
+  }
+  
+  /* Responsive gaps */
+  .gap-responsive {
+    @apply gap-4 sm:gap-6 md:gap-8 lg:gap-10;
+  }
+  
+  /* Safe area for mobile notches */
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  /* Prevent layout shift */
+  .no-layout-shift {
+    contain: layout style paint;
+  }
+}
