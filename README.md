@@ -1049,24 +1049,20 @@ We welcome contributions! Please follow these steps:
 
 ## 📄 License
 
-This project is private and proprietary. All rights reserved © 2024 DFW Furniture.
+This project is private and proprietary. All rights reserved © 2025 DFW Furniture.
 
 ---
 
 ## 👥 Team
 
-- **Lead Developer:** [Your Name]
-- **Backend (MERN):** [Developer Name]
-- **Backend (Spring Boot):** [Developer Name]
-- **UI/UX Designer:** [Designer Name]
-- **DevOps Engineer:** [Engineer Name]
+- **Lead Developer, Backend (MERN) , Backend (Spring Boot) , UI/UX Designer , DevOps Engineer : JAGARAPU RADHA KRISHNA
 
 ---
 
 ## 📞 Support
 
-For support, email: support@dfwfurniture.com  
-Issues: [GitHub Issues](https://github.com/yourusername/dfw-furniture/issues)  
+For support, email: radhakrishna02256@gmail.com
+Issues: [GitHub Issues](https://github.com/jagarapuRadhakrishna/dfw-furniture/issues)  
 Documentation: See `/docs` folder
 
 ---
@@ -1156,7 +1152,7 @@ Documentation: See `/docs` folder
 
 ---
 
-**Made with ❤️ by DFW Team**
+**Made with ❤️ by JAGARAPU RADHA KRISHNA**
 
 ⭐ **Star this repo if you find it useful!**
 
